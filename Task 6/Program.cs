@@ -1,10 +1,19 @@
-﻿namespace Task_6
+﻿using System;
+
+class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
+        Console.Write("Enter marks: ");
+        int.TryParse(Console.ReadLine(), out int marks);
+
+        Console.Write("Enter total: ");
+        int.TryParse(Console.ReadLine(), out int total);
+
+        // BREAKPOINT 1
+        double percentage = (double)marks / total * 100;
+
+        // BREAKPOINT 2
+        Console.WriteLine("Percentage: " + percentage);
     }
 }
